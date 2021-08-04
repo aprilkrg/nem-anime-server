@@ -1,15 +1,23 @@
 {
   "name": "nem-anime-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "A personal project based on the NEM project in the General Assembly cohort.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "watch-nodemon": "nodemon",
+    "dev": "open http://localhost:4000 && concurrently 'npm:watch-nodemon' --names 'server' --prefix-colors 'bgGreen.bold.italic' ",
+    "gogo": "open http://localhost:4000 && concurrently 'npm:watch-nodemon' --names 'rufio' --prefix-colors 'bgCyan.bold.italic'"
   },
-  "author": "akrg",
+  "author": "aprilkrgonzales@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "mongoose": "^5.13.5",
+    "nodemon": "^2.0.12"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0"
   }
 }
